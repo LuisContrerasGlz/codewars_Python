@@ -49,3 +49,19 @@ def evens_and_odds(n):
                 conv = 'f'+conv
             numero = int(numero / 16)
     return conv
+
+# Given a string made up of letters a, b, and/or c, switch the position of letters a and b (change a to b and vice versa). Leave any incidence of c untouched.
+
+
+def switcheroo(string):
+    l = len(string)
+    x = list(string)
+    for i in range(0, len(x)):
+        c = string[i]
+        if (string[i] == "a"):
+            x[i] = "b"
+        elif (string[i] == "b"):
+            x[i] = "a"
+
+    string = "".join(x)
+    return string
