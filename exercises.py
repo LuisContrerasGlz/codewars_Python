@@ -65,3 +65,32 @@ def switcheroo(string):
 
     string = "".join(x)
     return string
+
+# Given an array of integers (x), and a target (t), you must find out if any two consecutive numbers in the array sum to t. If so, remove the second number.
+
+
+def trouble(x, t):
+    y = []
+    l = len(x)
+    y.append(x[0])
+    pre = x[0]
+    for i in range(1, l):
+        if (pre+x[i] != t):
+            y.append(x[i])
+            pre = x[i]
+    return y
+
+# Given a mixed array of number and string representations of integers, add up the string integers and subtract this from the total of the non-string integers.
+
+
+def div_con(x):
+    # your code here
+    stringSum = 0
+    numSum = 0
+
+    for i in range(len(x)):
+        if type(x[i]) is str:
+            stringSum = float(x[i]) + stringSum
+        else:
+            numSum = numSum + x[i]
+    return numSum - stringSum
