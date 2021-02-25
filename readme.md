@@ -1,4 +1,4 @@
-Codewars exercises using Python.
+# Codewars exercises using Python.
 
 This project contains several exercises from www.codewars.com/ in Python.
 
